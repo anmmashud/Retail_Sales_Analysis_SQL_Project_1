@@ -6,22 +6,24 @@
 **Level**: Beginner  
 **Database**: `p1_retail_db`
 
-This project is designed to demonstrate SQL skills and techniques typically used by data analysts to explore, clean, and analyze retail sales data. The project involves setting up a retail sales database, performing exploratory data analysis (EDA), and answering specific business questions through SQL queries. This project is ideal for those who are starting their journey in data analysis and want to build a solid foundation in SQL.
-
+This project demonstrates SQL skills and techniques commonly used by data analysts to explore, clean, and analyze retail sales data. It involves setting up a retail sales database, performing exploratory data analysis (EDA), and answering specific business questions through SQL queries. This project is ideal for beginners looking to build a solid foundation in SQL.
 ## Objectives
 
-1. **Set up a retail sales database**: Create and populate a retail sales database with the provided sales data.
+1. **Set up a retail sales database**: Create and populate a retail sales database using the provided sales data.
+
 2. **Data Cleaning**: Identify and remove any records with missing or null values.
+
 3. **Exploratory Data Analysis (EDA)**: Perform basic exploratory data analysis to understand the dataset.
-4. **Business Analysis**: Use SQL to answer specific business questions and derive insights from the sales data.
+
+4. **Business Analysis**: Use SQL to answer specific business questions and derive actionable insights.
 
 ## Project Structure
 
 ### 1. **Database Setup**
 
-- **Database Creation**: The project starts by creating a database named `p1_retail_db`.
-- **Table Creation**: A table named `retail_sales` is created to store the sales data. The table structure includes columns for transaction ID, sale date, sale time, customer ID, gender, age, product category, quantity sold, price per unit, cost of goods sold (COGS), and total sale amount.
+- **Database Creation**: Create a database named `p1_retail_db`.
 
+- **Table Creation**: A table named `retail_sales` is created to store the sales data. The table structure includes columns for transaction ID, sale date, sale time, customer ID, gender, age, product category, quantity sold, price per unit, cost of goods sold (COGS), and total sale amount.
 
 ```sql
 
@@ -84,16 +86,18 @@ CREATE TABLE retail_sales
 
 ### 2. **Data Exploration & Cleaning**
 
-**Import Data from the CSV file:** [SQL_Retail_Sales_Analysis.csv](https://github.com/anmmashud/Retail_Sales_Analysis_SQL_Project_1/SQL_Retail_Sales_Analysis.csv)
+**Import Data from the CSV file:** [Download SQL_Retail_Sales_Analysis.csv](https://raw.githubusercontent.com/anmmashud/Retail_Sales_Analysis_SQL_Project_1/main/SQL_Retail_Sales_Analysis.csv)
 
 - **Record Count**: Determine the total number of records in the dataset.
-- **Customer Count**: Find out how many unique customers are in the dataset.
-- **Category Count**: Identify all unique product categories in the dataset.
+
+- **Customer Count**: Find the number of unique customers.
+
+- **Category Count**: Identify all unique product categories.
+
 - **Null Value Check**: Check for any null values in the dataset and delete records with missing data.
 
 ```sql
 -- Identify Rows with Null Values
-
 SELECT * 
 FROM retail_sales
 WHERE transactions_id IS NULL
@@ -107,9 +111,7 @@ WHERE transactions_id IS NULL
    OR price_per_unit IS NULL
    OR cogs IS NULL
    OR total_sale IS NULL;
-
 -- Delete Rows with Null Values
-
 DELETE FROM retail_sales
 WHERE transactions_id IS NULL
    OR sale_date IS NULL
@@ -211,7 +213,7 @@ SELECT DISTINCT category FROM retail_sales;
 ```
 `Ans:` Electronics, Clothing, Beauty
 
-### 3. **Data Analysis & Findings**
+### 3. **Data Analysis & Business Queries**
 
 The following SQL queries were developed to answer specific business questions:
 
@@ -361,10 +363,9 @@ GROUP BY
 
 ## Findings
 
-- **Customer Demographics**: The dataset includes customers from various age groups, with sales distributed across different categories such as Clothing and Beauty.
-- **High-Value Transactions**: Several transactions had a total sale amount greater than 1000, indicating premium purchases.
-- **Sales Trends**: Monthly analysis shows variations in sales, helping identify peak seasons.
-- **Customer Insights**: The analysis identifies the top-spending customers and the most popular product categories.
+- **Sales Patterns**: Sales are distributed across various categories and demographics.
+- **Customer Insights**: The 'Clothing' category has the highest number of unique customers.
+- **High-Value Transactions**: A significant number of transactions exceed a total sale value of 1000.
 
 ## Reports
 
@@ -378,27 +379,16 @@ This project serves as a comprehensive introduction to SQL for data analysts, co
 
 ## **How to Use This Project**
 
-1. **Clone the Repository**: Clone this project repository from GitHub to your local machine.
-
-2. **Set Up the Database**: Use the SQL script provided in the `Project_1_SQL_Query.sql` file to create and populate the database with the necessary tables and data.
-
-3. **Run the Queries**: Execute the SQL queries in the same `Project_1_SQL_Query.sql` file to analyze the dataset and generate insights.
-
-4. **Customize and Explore**: 
-   - Modify the existing queries to explore additional aspects of the dataset.
-   - Add new queries to answer further business questions or customize the analysis as needed.
+1. **Clone the Repository**: Download the project files from the GitHub repository.
+2. **Set Up the Database**: Execute the provided SQL scripts to create and populate the database.
+3. **Run the Queries**: Use the sample queries for analysis and customization.
+4. **Explore Further**: Modify queries or add new ones to generate additional insights.
 
 ## Author - A. N. M. Mashud
 
-This project is part of my portfolio, showcasing the SQL skills essential for data analyst roles. If you have any questions, feedback, or would like to collaborate, feel free to get in touch!
+This project is part of my portfolio, showcasing the SQL skills essential for data analyst roles. If you have any questions, feedback, or collaboration, feel free to reach out via social media:
 
-### Stay Updated and Join the Community
-
-For more content on SQL, data analysis, and other data-related topics, make sure to follow me on social media and join our community:
-
-- **YouTube**: [Subscribe to my channel for tutorials and insights](https://www.youtube.com/@anmmashud)
-- **Instagram**: [Follow me for daily tips and updates](https://www.instagram.com/anmmashud/)
-- **LinkedIn**: [Connect with me professionally](https://www.linkedin.com/in/anm-mashud)
-- **Whatsapp**: [Contact with me via phone Call](tel:+8801872809600)
-
-Thank you for your support, and I look forward to connecting with you!
+- **YouTube**: [@anmmashud](https://www.youtube.com/@anmmashud)
+- **Instagram**: [anmmashud](https://www.instagram.com/anmmashud/)
+- **LinkedIn**: [anm-mashud](https://www.linkedin.com/in/anm-mashud)
+- **WhatsApp**: [+8801872809600](https://wa.me/8801872809600)  
