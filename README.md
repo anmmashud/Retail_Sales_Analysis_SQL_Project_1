@@ -1,4 +1,9 @@
-# Retail Sales Analysis SQL Project 1
+# SQL Project 1 : Retail Sales Analysis 
+
+<div align="center">
+  <h3>Preview</h3>
+  <img src="SQL_Project_1.jpg" alt="Old Data" width="600">
+</div>
 
 ## Project Overview
 
